@@ -1,0 +1,16 @@
+1. What is the size of your dataset? Is there a separate batch for train, test, and validation, or do you need to do it manually? What are the different classes in your dataset?
+
+2. What is the distribution of your dataset, i.e., the number of samples per class? Show it using a plot. Is the distribution balanced or unbalanced?
+
+3. If a dataset is unbalanced, what kind of issues we might face? What are the available techniques to tackle these issues [Google and answer]?
+
+4. Which technique are you going to use to tackle your unbalanced dataset and why? NOTE: you DO NOT need use any such technique for Milestone 1, but you have to use it for the next milestones.
+
+5. Review some sample images from the dataset carefully. What are the sizes of the images? Are the images coloured or black and white? Can you do any kind of pre-processing (including but not limited to average filtering, unblur filtering, frequency domain filtering, CLAHE, etc) that might possibly help the classifier? If yes, please explain your rationale. NOTE: you DO NOT need to perform these pre-processing for Milestone 1.
+
+6. Use the logistic regression shown in the last class to classify. Report the following results separately for train and test - accuracy, sensitivity, specificity, positive predictive value (PPV), negative predictive value (NPV), the confusion matrix, and the F1 score. How can we interpret these results?
+
+Hint 1: use the attached code-snippet to convert the train and test images into CSV files, where each BW/colour image is converted to a row, and all the images are concatenated row-by-row to form a dataframe. The shape of the dataframe should be (number of samples+1) x (number of pixels). An additional column "target" is added where you can find the label of each image.
+
+Hint 2: Since the labels are strings, you need to encode the labels. See:
+https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html#sklearn.preprocessing.LabelEncoder 
